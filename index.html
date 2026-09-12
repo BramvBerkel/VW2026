@@ -34,11 +34,11 @@
   #hero h1{font-size:clamp(3rem,12vw,8.5rem);color:var(--orange);text-shadow:.06em .06em 0 var(--teal)}
   #hero h1 span{display:inline-block;opacity:0;transform:translateY(.6em) rotate(-6deg);transition:opacity .35s,transform .45s cubic-bezier(.2,.9,.3,1.3)}
   #hero h1 span.on{opacity:1;transform:none}
-  #hero .year{font-size:clamp(2rem,7vw,5rem);color:var(--teal)}
+  #hero .year{font-size:clamp(2rem,7vw,5rem);color:var(--teal);text-shadow:.06em .06em 0 var(--orange)}
   #hero .dest{font-size:clamp(1.1rem,3.4vw,1.8rem);font-weight:700;color:var(--ink);opacity:0;transform:scale(.9);transition:opacity .6s,transform .6s}
   #hero .dest.on{opacity:1;transform:none}
   #hero .dest b{background:var(--croc);padding:.15em .5em;border-radius:.3em;box-shadow:.15em .15em 0 var(--ink)}
-  #hero .hint{position:absolute;bottom:2.5rem;font-weight:700;color:var(--teal);opacity:.75;animation:bob 1.6s ease-in-out infinite}
+  #hero .hint{position:absolute;bottom:2.5rem;font-weight:700;color:var(--croc);opacity:1;animation:bob 1.6s ease-in-out infinite}
   @keyframes bob{50%{transform:translateY(.4rem)}}
   .stripes{position:absolute;left:0;right:0;bottom:0;height:22vh;z-index:-1;
     background:repeating-linear-gradient(90deg,var(--teal) 0 6vw,var(--teal-deep) 6vw 12vw);opacity:.9;
@@ -177,7 +177,9 @@
   #split .who{font-weight:700;font-size:.95rem;opacity:.8}
   #split .zz{font-family:var(--display);font-size:clamp(1.2rem,4vw,2rem);opacity:.7;animation:bob 2.4s ease-in-out infinite}
   #split .tally{font-size:clamp(1rem,3.6vw,1.6rem);color:var(--ink)}
-  #split .glasses svg{width:clamp(34px,9vw,60px)}
+  #fingersvg{width:min(44vw,210px);height:auto;overflow:visible}
+  #fingersvg .finger{transition:transform .5s cubic-bezier(.3,.7,.3,1.2),opacity .4s;transform-box:fill-box;transform-origin:center}
+  #fingersvg .finger.gone{opacity:0;transform:translateY(-90px) rotate(-15deg)}
   #split .disco .ball{animation:spin 8s linear infinite;transform-origin:100px 88px}
   #split .stick,#split .half{overflow:hidden}
   @keyframes spin{to{transform:rotate(360deg)}}
@@ -199,6 +201,7 @@
   #go .tally.go{color:var(--croc);text-shadow:.05em .05em 0 var(--ink);transform:scale(1.15) rotate(-4deg)}
   #go .who{font-weight:700;color:var(--teal-deep);opacity:.75}
   #go.shake .stick{animation:shake .1s linear infinite}
+  .scene-note{font-weight:700;color:var(--teal-deep);max-width:34ch;font-size:clamp(.95rem,2.6vw,1.1rem);line-height:1.4}
   .tally{font-family:var(--display);font-size:clamp(1.4rem,4.5vw,2.4rem);color:var(--orange-deep);min-height:1.2em}
   .glasses{display:flex;gap:clamp(.5rem,2vw,1.4rem);align-items:flex-end}
   .glasses svg{width:clamp(48px,14vw,90px);height:auto}
@@ -421,12 +424,14 @@
         <li><i></i><span>Lange broek</span></li>
         <li><i></i><span>T-shirt</span></li>
         <li><i></i><span>Zwembroek</span></li>
-        <li><i></i><span>Vest</span></li>
+        <li><i></i><span>Vest / jasje</span></li>
         <li><i></i><span>Sportshirt</span></li>
         <li><i></i><span>Toilettas</span></li>
         <li><i></i><span>Zonnebril</span></li>
+        <li><i></i><span>Schone onderbroeken</span></li>
+        <li><i></i><span>Sokken</span></li>
       </ul>
-      <p class="counter" id="counter">0 van 8 ingepakt</p>
+      <p class="counter" id="counter">0 van 10 ingepakt</p>
     </div>
     <p class="rules">Handbagage: gratis één tasje van max. 40 × 25 × 20 cm. Vloeistoffen tot 100 ml in een zipzakje.</p>
   </div>
@@ -456,9 +461,9 @@
     <li><span class="t">12:30</span><svg><use href="#i-train"/></svg><div><b>Verzamelen</b><small>Treinstation Heeze</small></div></li>
     <li><span class="t"></span><svg><use href="#i-car"/></svg><div><b>Even met de auto</b></div></li>
     <li><span class="t"></span><svg><use href="#i-plane"/></svg><div><b>Dan met het vliegtuig</b><small>bestemming blijft geheim tot de gate</small></div></li>
+    <li><span class="t">19:45</span><svg><use href="#i-land"/></svg><div><b>Aankomst</b></div></li>
     <li><span class="t"></span><svg><use href="#i-bus"/></svg><div><b>Daarna met de bus</b></div></li>
-    <li><span class="t">16:00</span><svg><use href="#i-land"/></svg><div><b>Aankomst</b><small>Hier begint het jaarlijkse avontuur. Geniet, besef dat je vrij weinig hoeft, er (hoogstwaarschijnlijk) geen luiers verschoond hoeven te worden en je geen verantwoording af hoeft te leggen.</small></div></li>
-    <li><span class="t">21:00</span><svg><use href="#i-food"/></svg><div><b>Eten</b></div></li>
+    <li><span class="t">21:00</span><svg><use href="#i-food"/></svg><div><b>Eten</b><small>Hier begint het jaarlijkse avontuur. Geniet, besef dat je vrij weinig hoeft, er (hoogstwaarschijnlijk) geen luiers verschoond hoeven te worden en je geen verantwoording af hoeft te leggen.</small></div></li>
   </ul>
 </section>
 
@@ -490,7 +495,7 @@
   <ul class="timeline">
     <li><span class="t">10:00</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijten</b></div></li>
     <li><span class="t">12:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b></div></li>
-    <li><span class="t"></span><svg><use href="#i-column"/></svg><div><b>Activiteit: cultuur proeven</b><small>Ontspan, laat het gebeuren en geniet van ongerepte natuur, lokale cultuur en die zeldzame vrijheid. Kom tot je zinnen &amp; wees je eigenste jezelf.</small></div></li>
+    <li><span class="t"></span><svg><use href="#i-column"/></svg><div><b>Activiteit: wat de grond geeft en het water neemt</b><small>Ontspan, laat het gebeuren en geniet van ongerepte natuur, lokale cultuur en die zeldzame vrijheid. Kom tot je zinnen &amp; wees je eigenste jezelf.</small></div></li>
     <li><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
   </ul>
 </section>
@@ -543,7 +548,7 @@
 </section>
 
 <!-- SPLIT: sleep vs party -->
-<section id="split" class="beer sticky-scene">
+<section id="split" class="sticky-scene">
   <div class="stick">
     <div class="half night-half">
       <svg viewBox="0 0 200 200" class="split-icon" aria-hidden="true">
@@ -572,9 +577,9 @@
         <g class="d1"><circle cx="50" cy="26" r="14" fill="#F6A055" stroke="var(--ink)" stroke-width="4"/><path d="M50 40 v40 M50 50 l-24-14 M50 50 l22-20 M50 80 l-16 30 M50 80 l18 30" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" fill="none"/></g>
         <g class="d2"><circle cx="140" cy="26" r="14" fill="#F6A055" stroke="var(--ink)" stroke-width="4"/><path d="M140 40 v40 M140 50 l-22-20 M140 50 l24-14 M140 80 l-18 30 M140 80 l16 30" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" fill="none"/></g>
       </svg>
-      <h2>Dansen</h2>
-      <div class="glasses" data-n="3" aria-label="Drie bierglazen die leeglopen terwijl je scrolt"></div>
-      <p class="tally">scroll om te drinken</p>
+      <h2>Dansen en …</h2>
+      <svg id="fingersvg" viewBox="0 0 320 320" aria-label="Vijf wijsvingers op een shotglas, van bovenaf; er verdwijnt er steeds een"></svg>
+      <p class="tally" id="fingertally">vinger op het glas</p>
       <p class="who">de andere helft</p>
     </div>
   </div>
@@ -598,7 +603,7 @@
   <ul class="timeline">
     <li><span class="t">9:30</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijt</b></div></li>
     <li><span class="t">11:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b></div></li>
-    <li><span class="t">12:00</span><svg><use href="#i-bolt"/></svg><div><b>Actie!</b><small>tot 14:00 — Bereid je voor; hier zal veel gevraagd worden van je mannelijkheid. Bewaar tegelijkertijd wat van die mannelijkheid voor de volgende activiteit.</small></div></li>
+    <li><span class="t">12:00</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar asfalt ophoudt, begint de vrijheid.</b><small>tot 14:00 — Bereid je voor; hier zal veel gevraagd worden van je mannelijkheid. Bewaar tegelijkertijd wat van die mannelijkheid voor de volgende activiteit.</small></div></li>
   </ul>
 </section>
 
@@ -627,7 +632,7 @@
   <ul class="timeline">
     <li><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
     <li><span class="t">16:00</span><svg><use href="#i-bus"/></svg><div><b>Bus terug</b></div></li>
-    <li><span class="t">16:30</span><svg><use href="#i-bolt"/></svg><div><b>Nog meer actie!</b><small>Bij deze activiteit zal veel van je gevraagd worden. Maak het je persoonlijke doel om hier niet als klein meisje uit te komen.</small></div></li>
+    <li><span class="t">16:30</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar de duisternis je prikkelt</b><small>Bij deze activiteit zal veel van je gevraagd worden. Maak het je persoonlijke doel om hier niet als klein meisje uit te komen.</small></div></li>
   </ul>
   <div class="garmin-mark" data-bb="45" data-hr="170" aria-label="Garmin: body battery 45 procent, hartslag 170"></div>
 </section>
@@ -654,6 +659,7 @@
   <div class="stick">
     <p class="date">20:00</p>
     <h2>Eten</h2>
+    <p class="scene-note">Tijd voor weer wat ontspanning en genot. Hier ga je een diepe culture dive meemaken.</p>
     <svg id="ribssvg" viewBox="0 0 360 260" aria-label="Spareribs die per ribbetje verdwijnen"></svg>
     <p class="tally" id="ribstally">scroll om te eten</p>
   </div>
@@ -771,6 +777,10 @@
     bolts.setAttribute('opacity',isGo?1:0); gotext.classList.toggle('go',isGo); go.classList.toggle('shake',isGo&&gp<.97);
     gotext.textContent=gp<.2?'klaar?':gp<.45?'3':gp<.7?'2':gp<.85?'1':'ACTIE!';
     gosub.style.opacity=isGo?0:.75;
+    // fingers lift off the shot glass one by one
+    const fp=prog(split); let gone=0;
+    fingers.forEach((f,i)=>{const g=fp*5>i+.7; f.classList.toggle('gone',g); if(g)gone++});
+    fingertally.textContent=fp===0?'vinger op het glas':gone<4?`nog ${5-gone} vingers`:gone<5?'nog 1 vinger. Die drinkt.':'Proost.';
     // beer scenes: glasses drain one by one
     beers.forEach(b=>{
       const bp=prog(b.el); let empty=0;
@@ -819,6 +829,19 @@
   }
   rsvg.innerHTML=rs; const meats=[...rsvg.querySelectorAll('.meat')];
   const ribs=document.getElementById('ribs'), ribstally=document.getElementById('ribstally');
+
+  // Split: five index fingers on a shot glass, seen from above
+  const fsvg=document.getElementById('fingersvg'); let fs='';
+  fs+='<circle cx="160" cy="160" r="50" fill="#1b1b1b" opacity=".15"/><circle cx="160" cy="160" r="44" fill="#F4EFE4" stroke="var(--ink)" stroke-width="4"/><circle cx="160" cy="160" r="32" fill="#F6C244" stroke="var(--ink)" stroke-width="2"/><ellipse cx="150" cy="150" rx="9" ry="5" fill="#fff" opacity=".6"/>';
+  for(let i=0;i<5;i++){
+    const a=-90+i*72;
+    fs+=`<g transform="rotate(${a+90} 160 160)"><g class="finger">
+      <rect x="146" y="-20" width="28" height="146" rx="14" fill="#E8B48A" stroke="var(--ink)" stroke-width="3"/>
+      <rect x="151" y="100" width="18" height="18" rx="7" fill="#F4C9AE" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M150 28 h20 M150 62 h20" stroke="#C48A5F" stroke-width="2" stroke-linecap="round"/></g></g>`;
+  }
+  fsvg.innerHTML=fs; const fingers=[...fsvg.querySelectorAll('.finger')];
+  const fingertally=document.getElementById('fingertally'), split=document.getElementById('split');
 
   // Beer glasses (every .beer scene)
   const GLASS_Y=30, GLASS_H=90;
@@ -894,7 +917,7 @@
     const li=e.target.closest('li'); if(!li) return;
     li.classList.toggle('done');
     const n=list.querySelectorAll('.done').length;
-    counter.textContent=n===8?'Alles ingepakt. Krokodil niet vergeten.':`${n} van 8 ingepakt`;
+    counter.textContent=n===10?'Alles ingepakt. Krokodil niet vergeten.':`${n} van 10 ingepakt`;
   });
 </script>
 </body>
