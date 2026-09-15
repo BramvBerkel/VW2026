@@ -370,8 +370,8 @@
     <path d="M78 108 q22 20 44 0" stroke="var(--ink)" stroke-width="5" fill="none" stroke-linecap="round"/>
   </svg>
   <h2>Overdag</h2>
-  <p class="temp">20–23°</p>
-  <p>Aangenaam warm met maximumtemperaturen tussen 20 °C en 23 °C.</p>
+  <p class="temp">22–24°</p>
+  <p>Aangenaam warm met maximumtemperaturen tussen 22 °C en 24 °C.</p>
   <div class="minis reveal" aria-hidden="true">
     <svg viewBox="0 0 60 60"><path d="M8 32 q8-10 16 0 q8 10 16 0 q8-10 16 0" fill="none" stroke="var(--teal)" stroke-width="5" stroke-linecap="round"/><path d="M8 44 q8-10 16 0 q8 10 16 0 q8-10 16 0" fill="none" stroke="var(--teal)" stroke-width="5" stroke-linecap="round"/></svg>
     <svg viewBox="0 0 60 60"><rect x="8" y="24" width="44" height="14" rx="7" fill="var(--ink)"/><rect x="12" y="27" width="16" height="8" rx="4" fill="var(--teal)"/><rect x="32" y="27" width="16" height="8" rx="4" fill="var(--teal)"/></svg>
@@ -390,8 +390,8 @@
     <circle cx="96" cy="86" r="5" fill="var(--night)"/><circle cx="112" cy="112" r="8" fill="var(--night)" opacity=".5"/>
   </svg>
   <h2>'s Nachts</h2>
-  <p class="temp">12–14°</p>
-  <p>De temperatuur daalt naar ongeveer 12 °C tot 14 °C, dus een jas of vest is 's avonds handig.</p>
+  <p class="temp">14–15°</p>
+  <p>De temperatuur daalt naar ongeveer 14 °C tot 15 °C, dus een jas of vest is 's avonds handig.</p>
   <span class="vest">vest mee 🧥</span>
 </section>
 
@@ -412,11 +412,12 @@
       <g stroke="var(--orange-deep)" stroke-width="4" fill="none" stroke-linecap="round">
         <path d="M40 110 v248 M32 118 l8-8 8 8 M32 350 l8 8 8-8"/>
         <path d="M66 392 h228 M74 384 l-8 8 8 8 M286 384 l8 8-8 8"/>
-        <path d="M296 40 l60 30 M300 30 l-4 10 10 4 M348 60 l10 4 -4 10"/>
+        <path d="M300 96 l44-34 M300 96 l10 -1 -6 -8 M344 62 l-10 1 6 8"/>
+        <path d="M270 110 l16-12 M294 134 l16-12" stroke-dasharray="4 4" stroke-width="2"/>
       </g>
       <text class="dims" x="14" y="240" transform="rotate(-90 14 240)" text-anchor="middle">40 cm</text>
       <text class="dims" x="180" y="415" text-anchor="middle">25 cm</text>
-      <text class="dims" x="300" y="30" text-anchor="start">20 cm</text>
+      <text class="dims" x="322" y="66" text-anchor="middle" transform="rotate(-37 322 66)">20 cm</text>
     </svg>
     <div class="list-wrap reveal">
       <ul class="list" id="list">
@@ -456,19 +457,18 @@
 <section id="thu" class="dayhead">
   <p class="date">Donderdag 1 oktober</p>
   <h2>Vertrek</h2>
-  <div class="garmin-mark" data-bb="95" data-hr="75" aria-label="Garmin: body battery 95 procent, hartslag 75"></div>
   <ul class="timeline">
-    <li><span class="t">12:30</span><svg><use href="#i-train"/></svg><div><b>Verzamelen</b><small>Treinstation Heeze</small></div></li>
+    <li data-bb="95" data-hr="70"><span class="t">12:30</span><svg><use href="#i-train"/></svg><div><b>Verzamelen</b><small>Treinstation Heeze</small></div></li>
     <li><span class="t"></span><svg><use href="#i-car"/></svg><div><b>Even met de auto</b></div></li>
     <li><span class="t"></span><svg><use href="#i-plane"/></svg><div><b>Dan met het vliegtuig</b><small>bestemming blijft geheim tot de gate</small></div></li>
-    <li><span class="t">19:45</span><svg><use href="#i-land"/></svg><div><b>Aankomst</b></div></li>
+    <li data-bb="85" data-hr="60"><span class="t">19:45</span><svg><use href="#i-land"/></svg><div><b>Aankomst</b></div></li>
     <li><span class="t"></span><svg><use href="#i-bus"/></svg><div><b>Daarna met de bus</b></div></li>
-    <li><span class="t">21:00</span><svg><use href="#i-food"/></svg><div><b>Eten</b><small>Hier begint het jaarlijkse avontuur. Geniet, besef dat je vrij weinig hoeft, er (hoogstwaarschijnlijk) geen luiers verschoond hoeven te worden en je geen verantwoording af hoeft te leggen.</small></div></li>
+    <li data-bb="75" data-hr="70"><span class="t">21:00</span><svg><use href="#i-food"/></svg><div><b>Eten</b><small>Hier begint het jaarlijkse avontuur. Geniet, besef dat je vrij weinig hoeft, er (hoogstwaarschijnlijk) geen luiers verschoond hoeven te worden en je geen verantwoording af hoeft te leggen.</small></div></li>
   </ul>
 </section>
 
 <!-- BEER -->
-<section class="beer sticky-scene">
+<section class="beer sticky-scene" data-ramp data-bb-from="75" data-bb-to="50" data-hr-from="70" data-hr-to="90">
   <div class="stick">
     <h2>Daarna…</h2>
     <div class="glasses" aria-label="Vijf bierglazen die leeglopen terwijl je scrolt"></div>
@@ -477,12 +477,11 @@
 </section>
 
 <section id="thu-end" class="dayhead">
-  <div class="garmin-mark" data-bb="50" data-hr="90" aria-label="Garmin: body battery 50 procent, hartslag 90"></div>
   <p class="caption">Body battery 50 %. Hartslag 90. Het is nog maar donderdag.</p>
 </section>
 
 <!-- SLEEP -->
-<section class="sleep dark">
+<section class="sleep dark" data-ramp data-bb-from="50" data-bb-to="85" data-hr-from="50" data-hr-to="50">
   <h2>Slapen</h2>
   <p class="zz">z z z</p>
 </section>
@@ -491,17 +490,16 @@
 <section id="fri" class="dayhead">
   <p class="date">Vrijdag 2 oktober</p>
   <h2>Cultuur</h2>
-  <div class="garmin-mark" data-bb="80" data-hr="75" aria-label="Garmin: body battery 80 procent, hartslag 75"></div>
   <ul class="timeline">
-    <li><span class="t">10:00</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijten</b></div></li>
+    <li data-bb="85" data-hr="70"><span class="t">10:00</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijten</b></div></li>
     <li><span class="t">12:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b></div></li>
-    <li><span class="t"></span><svg><use href="#i-column"/></svg><div><b>Activiteit: wat de grond geeft en het water neemt</b><small>Ontspan, laat het gebeuren en geniet van ongerepte natuur, lokale cultuur en die zeldzame vrijheid. Kom tot je zinnen &amp; wees je eigenste jezelf.</small></div></li>
-    <li><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
+    <li data-bb="80" data-hr="75"><span class="t"></span><svg><use href="#i-column"/></svg><div><b>Activiteit: wat de grond geeft en het water neemt</b><small>Ontspan, laat het gebeuren en geniet van ongerepte natuur, lokale cultuur en die zeldzame vrijheid. Kom tot je zinnen &amp; wees je eigenste zelf.</small></div></li>
+    <li data-bb="75" data-hr="60"><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
   </ul>
 </section>
 
 <!-- SUNSET -->
-<section id="sunset" class="sticky-scene">
+<section id="sunset" class="sticky-scene" data-bb="70" data-hr="75">
   <div class="stick">
     <p class="date">18:00</p>
     <h2>Zonsondergang</h2>
@@ -522,13 +520,12 @@
 
 <section id="fri-mid" class="dayhead">
   <ul class="timeline">
-    <li><span class="t">19:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b><small>terug naar het hotel</small></div></li>
+    <li data-bb="65" data-hr="60"><span class="t">19:00</span><svg><use href="#i-bus"/></svg><div><b>Bus terug naar de stad</b><small>tijd voor een moment van reflectie</small></div></li>
   </ul>
-  <div class="garmin-mark" data-bb="50" data-hr="75" aria-label="Garmin: body battery 50 procent, hartslag 75"></div>
 </section>
 
 <!-- PIZZA -->
-<section id="pizza" class="sticky-scene">
+<section id="pizza" class="sticky-scene" data-bb="60" data-hr="70">
   <div class="stick">
     <p class="date">21:30</p>
     <h2>Eten</h2>
@@ -538,7 +535,7 @@
 </section>
 
 <!-- BEER 2 -->
-<section class="beer sticky-scene">
+<section class="beer sticky-scene" data-ramp data-bb-from="60" data-bb-to="35" data-hr-from="70" data-hr-to="80">
   <div class="stick">
     <p class="date">23:00</p>
     <h2>Nog een rondje</h2>
@@ -548,7 +545,7 @@
 </section>
 
 <!-- SPLIT: sleep vs party -->
-<section id="split" class="sticky-scene">
+<section id="split" class="sticky-scene" data-bb="25" data-hr="85">
   <div class="stick">
     <div class="half night-half">
       <svg viewBox="0 0 200 200" class="split-icon" aria-hidden="true">
@@ -586,11 +583,10 @@
 </section>
 
 <section id="fri-end" class="dayhead">
-  <div class="garmin-mark" data-bb="25" data-hr="85" aria-label="Garmin: body battery 25 procent, hartslag 85"></div>
   <p class="caption">Body battery 25 %. Hartslag 85. Het horloge adviseert rust. Het horloge weet niet wat morgen is.</p>
 </section>
 
-<section class="sleep dark">
+<section class="sleep dark" data-ramp data-bb-from="25" data-bb-to="75" data-hr-from="55" data-hr-to="55">
   <h2>Slapen</h2>
   <p class="zz">z z z</p>
 </section>
@@ -599,11 +595,10 @@
 <section id="sat" class="dayhead">
   <p class="date">Zaterdag 3 oktober</p>
   <h2>Actie!</h2>
-  <div class="garmin-mark" data-bb="75" data-hr="75" aria-label="Garmin: body battery 75 procent, hartslag 75"></div>
   <ul class="timeline">
-    <li><span class="t">9:30</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijt</b></div></li>
+    <li data-bb="75" data-hr="70"><span class="t">9:30</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijt</b></div></li>
     <li><span class="t">11:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b></div></li>
-    <li><span class="t">12:00</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar asfalt ophoudt, begint de vrijheid.</b><small>tot 14:00 — Bereid je voor; hier zal veel gevraagd worden van je mannelijkheid. Bewaar tegelijkertijd wat van die mannelijkheid voor de volgende activiteit.</small></div></li>
+    <li data-bb="75" data-hr="110"><span class="t">12:00</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar asfalt ophoudt, begint de vrijheid.</b><small>tot 14:00 — Bereid je voor; hier zal veel gevraagd worden van je mannelijkheid. Bewaar tegelijkertijd wat van die mannelijkheid voor de volgende activiteit.</small></div></li>
   </ul>
 </section>
 
@@ -628,13 +623,11 @@
 </section>
 
 <section class="dayhead">
-  <div class="garmin-mark" data-bb="65" data-hr="140" aria-label="Garmin: body battery 65 procent, hartslag 140"></div>
   <ul class="timeline">
-    <li><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
+    <li data-bb="70" data-hr="70"><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
     <li><span class="t">16:00</span><svg><use href="#i-bus"/></svg><div><b>Bus terug</b></div></li>
-    <li><span class="t">16:30</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar de duisternis je prikkelt</b><small>Bij deze activiteit zal veel van je gevraagd worden. Maak het je persoonlijke doel om hier niet als klein meisje uit te komen.</small></div></li>
+    <li data-bb="50" data-hr="125"><span class="t">16:30</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar de duisternis je prikkelt</b><small>Bij deze activiteit zal veel van je gevraagd worden. Maak het je persoonlijke doel om hier niet als klein meisje uit te komen.</small></div></li>
   </ul>
-  <div class="garmin-mark" data-bb="45" data-hr="170" aria-label="Garmin: body battery 45 procent, hartslag 170"></div>
 </section>
 
 <!-- STRESS -->
@@ -655,7 +648,7 @@
 </section>
 
 <!-- RIBS -->
-<section id="ribs" class="sticky-scene">
+<section id="ribs" class="sticky-scene" data-bb="40" data-hr="75">
   <div class="stick">
     <p class="date">20:00</p>
     <h2>Eten</h2>
@@ -665,7 +658,7 @@
   </div>
 </section>
 
-<section class="beer sticky-scene">
+<section class="beer sticky-scene" data-ramp data-bb-from="40" data-bb-to="15" data-hr-from="80" data-hr-to="90">
   <div class="stick">
     <h2>Daarna…</h2>
     <div class="glasses" aria-label="Vijf bierglazen die leeglopen terwijl je scrolt"></div>
@@ -674,11 +667,10 @@
 </section>
 
 <section class="dayhead">
-  <div class="garmin-mark" data-bb="15" data-hr="90" aria-label="Garmin: body battery 15 procent, hartslag 90"></div>
   <p class="caption">Body battery 15 %. Hartslag 90. Het horloge heeft het opgegeven.</p>
 </section>
 
-<section class="sleep dark">
+<section class="sleep dark" data-ramp data-bb-from="15" data-bb-to="65" data-hr-from="60" data-hr-to="60">
   <h2>Slapen</h2>
   <p class="zz">z z z</p>
 </section>
@@ -687,14 +679,12 @@
 <section id="sun-day" class="dayhead">
   <p class="date">Zondag 4 oktober</p>
   <h2>Naar huis</h2>
-  <div class="garmin-mark" data-bb="30" data-hr="70" aria-label="Garmin: body battery 30 procent, hartslag 70"></div>
   <ul class="timeline">
     <li><span class="t">9:00</span><svg><use href="#i-bus"/></svg><div><b>Vertrek naar de luchthaven</b></div></li>
-    <li><span class="t">11:20</span><svg><use href="#i-plane"/></svg><div><b>Vliegen</b></div></li>
-    <li><span class="t">13:00</span><svg><use href="#i-land"/></svg><div><b>Aankomst</b><small>Zoals, helaas altijd, is ook hier weer het einde bereikt. Hopelijk is er genoten, gestreakt, gerust en geschrokken, bovenal gedronken en gegeten, ge-man-t en ge-ruig-t. Tot de volgende editie!</small></div></li>
-    <li><span class="t">14:00</span><svg><use href="#i-home"/></svg><div><b>Herenigd met het thuisfront</b></div></li>
+    <li data-bb="50" data-hr="70"><span class="t">11:20</span><svg><use href="#i-plane"/></svg><div><b>Vliegen</b></div></li>
+    <li data-bb="45" data-hr="65"><span class="t">13:00</span><svg><use href="#i-land"/></svg><div><b>Aankomst</b><small>Zoals, helaas altijd, is ook hier weer het einde bereikt. Hopelijk is er genoten, gestreakt, gerust en geschrokken, bovenal gedronken en gegeten, ge-man-t en ge-ruig-t. Tot de volgende editie!</small></div></li>
+    <li data-bb="35" data-hr="60"><span class="t">14:00</span><svg><use href="#i-home"/></svg><div><b>Herenigd met het thuisfront</b></div></li>
   </ul>
-  <div class="garmin-mark" data-bb="35" data-hr="60" aria-label="Garmin: body battery 35 procent, hartslag 60"></div>
   <p class="caption">Body battery 35 %. Hartslag 60. Officieel hersteld. Officieus niet.</p>
 </section>
 
@@ -871,7 +861,8 @@
       <text id="w-hr" x="122" y="140" fill="#fff" font-size="16">–</text>
       <rect x="86" y="0" width="28" height="10" rx="3" fill="var(--ink)"/><rect x="86" y="190" width="28" height="10" rx="3" fill="var(--ink)"/>`;
   const wRing=watch.querySelector('.bb'), wBB=document.getElementById('w-bb'), wHR=document.getElementById('w-hr'), wHeart=watch.querySelector('.hr');
-  const marks=[...document.querySelectorAll('.garmin-mark')].map(m=>({el:m,bb:+m.dataset.bb,hr:+m.dataset.hr}));
+  const marks=[...document.querySelectorAll('[data-bb]')].map(m=>({el:m,bb:+m.dataset.bb,hr:+m.dataset.hr}));
+  const ramps=[...document.querySelectorAll('[data-ramp]')].map(r=>({el:r,bbF:+r.dataset.bbFrom,bbT:+r.dataset.bbTo,hrF:+r.dataset.hrFrom,hrT:+r.dataset.hrTo}));
   const progStart=document.getElementById('thu'), progEnd=document.getElementById('outro');
   let cur={bb:marks[0].bb,hr:marks[0].hr}, target=cur, activeMark=-1, raf=null;
   function paint(){
@@ -890,9 +881,21 @@
     const line=y+vh*0.65;
     const inProg=line>=progStart.offsetTop && y<progEnd.offsetTop-vh*0.5;
     watch.classList.toggle('on',inProg);
-    let idx=-1; marks.forEach((m,i)=>{if(m.el.getBoundingClientRect().top+y<=line) idx=i});
-    if(idx<0) idx=0;
-    if(idx!==activeMark){activeMark=idx; tweenTo({bb:marks[idx].bb,hr:marks[idx].hr});}
+    // inside a ramp (drinking / sleeping): follow the scroll continuously
+    const active=ramps.find(r=>{const t=r.el.getBoundingClientRect().top+y; return line>=t && line<=t+r.el.offsetHeight});
+    if(active){
+      const t=active.el.getBoundingClientRect().top+y;
+      const k=Math.max(0,Math.min(1,(line-t)/active.el.offsetHeight));
+      cancelAnimationFrame(raf); activeMark=-2;
+      cur={bb:active.bbF+(active.bbT-active.bbF)*k, hr:active.hrF+(active.hrT-active.hrF)*k}; paint();
+      return;
+    }
+    // otherwise: last mark passed, where a finished ramp counts as a mark at its end
+    let best=null, bestPos=-1;
+    marks.forEach((m,i)=>{const pos=m.el.getBoundingClientRect().top+y+(m.el.tagName==='SECTION'?m.el.offsetHeight*0.3:0); if(pos<=line && pos>=bestPos){bestPos=pos; best={key:'m'+i,bb:m.bb,hr:m.hr}}});
+    ramps.forEach((r,i)=>{const pos=r.el.getBoundingClientRect().top+y+r.el.offsetHeight; if(pos<=line && pos>bestPos){bestPos=pos; best={key:'r'+i,bb:r.bbT,hr:r.hrT}}});
+    if(!best) best={key:'m0',bb:marks[0].bb,hr:marks[0].hr};
+    if(best.key!==activeMark){activeMark=best.key; tweenTo({bb:best.bb,hr:best.hr});}
   }
   paint();
 
