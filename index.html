@@ -370,8 +370,8 @@
     <path d="M78 108 q22 20 44 0" stroke="var(--ink)" stroke-width="5" fill="none" stroke-linecap="round"/>
   </svg>
   <h2>Overdag</h2>
-  <p class="temp">22–24°</p>
-  <p>Aangenaam warm met maximumtemperaturen tussen 22 °C en 24 °C.</p>
+  <p class="temp">24–26°</p>
+  <p>Aangenaam warm met maximumtemperaturen tussen 24 °C en 26 °C.</p>
   <div class="minis reveal" aria-hidden="true">
     <svg viewBox="0 0 60 60"><path d="M8 32 q8-10 16 0 q8 10 16 0 q8-10 16 0" fill="none" stroke="var(--teal)" stroke-width="5" stroke-linecap="round"/><path d="M8 44 q8-10 16 0 q8 10 16 0 q8-10 16 0" fill="none" stroke="var(--teal)" stroke-width="5" stroke-linecap="round"/></svg>
     <svg viewBox="0 0 60 60"><rect x="8" y="24" width="44" height="14" rx="7" fill="var(--ink)"/><rect x="12" y="27" width="16" height="8" rx="4" fill="var(--teal)"/><rect x="32" y="27" width="16" height="8" rx="4" fill="var(--teal)"/></svg>
@@ -431,8 +431,10 @@
         <li><i></i><span>Zonnebril</span></li>
         <li><i></i><span>Schone onderbroeken</span></li>
         <li><i></i><span>Sokken</span></li>
+        <li><i></i><span>Paspoort / ID</span></li>
+        <li><i></i><span>Rijbewijs</span></li>
       </ul>
-      <p class="counter" id="counter">0 van 10 ingepakt</p>
+      <p class="counter" id="counter">0 van 12 ingepakt</p>
     </div>
     <p class="rules">Handbagage: gratis één tasje van max. 40 × 25 × 20 cm. Vloeistoffen tot 100 ml in een zipzakje.</p>
   </div>
@@ -494,7 +496,7 @@
     <li data-bb="85" data-hr="70"><span class="t">10:00</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijten</b></div></li>
     <li><span class="t">12:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b></div></li>
     <li data-bb="80" data-hr="75"><span class="t"></span><svg><use href="#i-column"/></svg><div><b>Activiteit: wat de grond geeft en het water neemt</b><small>Ontspan, laat het gebeuren en geniet van ongerepte natuur, lokale cultuur en die zeldzame vrijheid. Kom tot je zinnen &amp; wees je eigenste zelf.</small></div></li>
-    <li data-bb="75" data-hr="60"><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
+    <li data-bb="75" data-hr="60"><span class="t">17:00</span><svg><use href="#i-food"/></svg><div><b>Eten</b></div></li>
   </ul>
 </section>
 
@@ -520,7 +522,7 @@
 
 <section id="fri-mid" class="dayhead">
   <ul class="timeline">
-    <li data-bb="65" data-hr="60"><span class="t">19:00</span><svg><use href="#i-bus"/></svg><div><b>Bus terug naar de stad</b><small>tijd voor een moment van reflectie</small></div></li>
+    <li data-bb="65" data-hr="60"><span class="t">20:00</span><svg><use href="#i-bus"/></svg><div><b>Bus terug naar de stad</b><small>tijd voor een moment van reflectie</small></div></li>
   </ul>
 </section>
 
@@ -597,7 +599,7 @@
   <h2>Actie!</h2>
   <ul class="timeline">
     <li data-bb="75" data-hr="70"><span class="t">9:30</span><svg><use href="#i-coffee"/></svg><div><b>Ontbijt</b></div></li>
-    <li><span class="t">11:00</span><svg><use href="#i-bus"/></svg><div><b>Bus</b></div></li>
+    <li><span class="t">10:00</span><svg><use href="#i-bus"/></svg><div><b>Reizen als bazen</b></div></li>
     <li data-bb="75" data-hr="110"><span class="t">12:00</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar asfalt ophoudt, begint de vrijheid.</b><small>tot 14:00 — Bereid je voor; hier zal veel gevraagd worden van je mannelijkheid. Bewaar tegelijkertijd wat van die mannelijkheid voor de volgende activiteit.</small></div></li>
   </ul>
 </section>
@@ -625,7 +627,7 @@
 <section class="dayhead">
   <ul class="timeline">
     <li data-bb="70" data-hr="70"><span class="t">15:00</span><svg><use href="#i-food"/></svg><div><b>Lunch</b></div></li>
-    <li><span class="t">16:00</span><svg><use href="#i-bus"/></svg><div><b>Bus terug</b></div></li>
+    <li><span class="t">16:00</span><svg><use href="#i-bus"/></svg><div><b>Wederkeren als Goden</b></div></li>
     <li data-bb="50" data-hr="125"><span class="t">16:30</span><svg><use href="#i-bolt"/></svg><div><b>Activiteit: waar de duisternis je prikkelt</b><small>Bij deze activiteit zal veel van je gevraagd worden. Maak het je persoonlijke doel om hier niet als klein meisje uit te komen.</small></div></li>
   </ul>
 </section>
@@ -920,7 +922,7 @@
     const li=e.target.closest('li'); if(!li) return;
     li.classList.toggle('done');
     const n=list.querySelectorAll('.done').length;
-    counter.textContent=n===10?'Alles ingepakt. Krokodil niet vergeten.':`${n} van 10 ingepakt`;
+    counter.textContent=n===12?'Alles ingepakt. Krokodil niet vergeten.':`${n} van 12 ingepakt`;
   });
 </script>
 </body>
